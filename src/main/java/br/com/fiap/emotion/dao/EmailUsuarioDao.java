@@ -13,10 +13,11 @@ import java.util.List;
  * @author Mariana
  * Classe com objetivo de realizar o CRUD da entidade Email Usuario
  */
-public class EmailUsuarioDao implements AbstractDao<EmailUsuario>{
+public class EmailUsuarioDao implements AbstractDao<EmailUsuario> {
 
 	/**
 	 * Método utilizado para inserir um Email no banco
+	 *
 	 * @param email a ser inserido
 	 */
 	@Override
@@ -50,6 +51,7 @@ public class EmailUsuarioDao implements AbstractDao<EmailUsuario>{
 
 	/**
 	 * Método utilizado para listar todos os registros do banco
+	 *
 	 * @return lista de emails
 	 */
 	@Override
@@ -95,6 +97,7 @@ public class EmailUsuarioDao implements AbstractDao<EmailUsuario>{
 
 	/**
 	 * Método utilizado para atualizar um registro do banco
+	 *
 	 * @param email a ser atualizado
 	 * @throws ObjectNotFoundException lancado quando não encontrado nenhum registro
 	 */
@@ -128,6 +131,7 @@ public class EmailUsuarioDao implements AbstractDao<EmailUsuario>{
 
 	/**
 	 * Método utilizado para remover um registro do banco
+	 *
 	 * @param email a ser removido
 	 */
 	@Override

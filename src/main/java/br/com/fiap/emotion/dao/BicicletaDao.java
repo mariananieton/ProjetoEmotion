@@ -51,6 +51,7 @@ public class BicicletaDao implements AbstractDao<Bicicleta> {
 
 	/**
 	 * Método utilizado para listar todos os registros do banco
+	 *
 	 * @return lista de bicicletas
 	 */
 	@Override
@@ -85,6 +86,7 @@ public class BicicletaDao implements AbstractDao<Bicicleta> {
 
 	/**
 	 * Método utilizado para atualizar um registro do banco
+	 *
 	 * @param bicicleta a ser atualizado
 	 * @throws ObjectNotFoundException lancado quando não encontrado nenhum registro
 	 */
@@ -118,6 +120,7 @@ public class BicicletaDao implements AbstractDao<Bicicleta> {
 
 	/**
 	 * Método utilizado para remover um registro do banco
+	 *
 	 * @param bicicleta a ser removido
 	 */
 	@Override

@@ -16,6 +16,7 @@ public class UsuarioPlanoDao implements AbstractDao<UsuarioPlano> {
 
 	/**
 	 * Método utilizado para inserir os dados entre usuario e plano no banco
+	 *
 	 * @param usuarioPlano a ser inserida
 	 */
 	@Override
@@ -59,6 +60,7 @@ public class UsuarioPlanoDao implements AbstractDao<UsuarioPlano> {
 
 	/**
 	 * Método utilizado para listar todos os registros do banco
+	 *
 	 * @return lista de utilizacoes
 	 */
 	@Override
@@ -170,6 +172,7 @@ public class UsuarioPlanoDao implements AbstractDao<UsuarioPlano> {
 
 	/**
 	 * Método utilizado para remover um registro do banco
+	 *
 	 * @param usuarioPlano a ser removido
 	 */
 	@Override

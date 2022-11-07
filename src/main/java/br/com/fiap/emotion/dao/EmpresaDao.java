@@ -16,6 +16,7 @@ public class EmpresaDao implements AbstractDao<Empresa> {
 
 	/**
 	 * Método utilizado para inserir uma Empresa no banco
+	 *
 	 * @param empresa a ser inserida
 	 */
 	@Override
@@ -49,6 +50,7 @@ public class EmpresaDao implements AbstractDao<Empresa> {
 
 	/**
 	 * Método utilizado para pesquisar um Empresa pelo Id do banco
+	 *
 	 * @param id a ser pesquisado
 	 * @return empresa referente ao id pesquisado
 	 * @throws ObjectNotFoundException lancado quando não encontrado nenhum registro
@@ -85,6 +87,7 @@ public class EmpresaDao implements AbstractDao<Empresa> {
 
 	/**
 	 * Método utilizado para listar todos os registros do banco
+	 *
 	 * @return lista de empresas
 	 */
 	@Override
@@ -118,6 +121,7 @@ public class EmpresaDao implements AbstractDao<Empresa> {
 
 	/**
 	 * Método utilizado para atualizar um registro do banco
+	 *
 	 * @param empresa a ser atualizado
 	 * @throws ObjectNotFoundException lancado quando não encontrado nenhum registro
 	 */
@@ -151,6 +155,7 @@ public class EmpresaDao implements AbstractDao<Empresa> {
 
 	/**
 	 * Método utilizado para remover um registro do banco
+	 *
 	 * @param empresa a ser removido
 	 */
 	@Override

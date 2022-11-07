@@ -18,6 +18,7 @@ public class EnderecoUsuarioDao implements AbstractDao<EnderecoUsuario> {
 
 	/**
 	 * Método utilizado para inserir um Endereco no banco
+	 *
 	 * @param endereco a ser inserido
 	 */
 	@Override
@@ -62,6 +63,7 @@ public class EnderecoUsuarioDao implements AbstractDao<EnderecoUsuario> {
 
 	/**
 	 * Método utilizado para listar todos os registros do banco
+	 *
 	 * @return lista de enderecos
 	 */
 	@Override
@@ -116,6 +118,7 @@ public class EnderecoUsuarioDao implements AbstractDao<EnderecoUsuario> {
 
 	/**
 	 * Método utilizado para atualizar um registro do banco
+	 *
 	 * @param endereco a ser atualizado
 	 * @throws ObjectNotFoundException lancado quando não encontrado nenhum registro
 	 */
@@ -161,6 +164,7 @@ public class EnderecoUsuarioDao implements AbstractDao<EnderecoUsuario> {
 
 	/**
 	 * Método utilizado para remover um registro do banco
+	 *
 	 * @param endereco a ser removido
 	 */
 	@Override

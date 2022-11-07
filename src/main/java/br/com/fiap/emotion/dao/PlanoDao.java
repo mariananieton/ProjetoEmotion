@@ -30,7 +30,7 @@ public class PlanoDao implements AbstractDao<Plano> {
 
 			stm.setString(1, plano.getNome());
 			stm.setDouble(2, plano.getValor());
-			stm.setString(3,String.valueOf(plano.getTipo()));
+			stm.setString(3, String.valueOf(plano.getTipo()));
 			stm.setString(4, String.valueOf(plano.getStatus()));
 
 			stm.executeUpdate();
@@ -52,6 +52,7 @@ public class PlanoDao implements AbstractDao<Plano> {
 
 	/**
 	 * Método utilizado para pesquisar um Plano pelo Id do banco
+	 *
 	 * @param id a ser pesquisado
 	 * @return plano referente ao id pesquisado
 	 */
@@ -122,6 +123,7 @@ public class PlanoDao implements AbstractDao<Plano> {
 
 	/**
 	 * Método utilizado para atualizar um registro do banco
+	 *
 	 * @param plano a ser atualizado
 	 * @throws ObjectNotFoundException lancado quando não encontrado nenhum registro
 	 */
@@ -156,6 +158,7 @@ public class PlanoDao implements AbstractDao<Plano> {
 
 	/**
 	 * Método utilizado para remover um registro do banco
+	 *
 	 * @param plano a ser removido
 	 */
 	@Override

@@ -31,7 +31,7 @@ public class EmailEmpresaDao implements AbstractDao<EmailEmpresa> {
 
 			stm.setInt(1, email.getEmpresa().getId());
 			stm.setString(2, email.getEmail());
-			stm.setString(3,String.valueOf(email.getStatus()));
+			stm.setString(3, String.valueOf(email.getStatus()));
 
 			stm.executeUpdate();
 

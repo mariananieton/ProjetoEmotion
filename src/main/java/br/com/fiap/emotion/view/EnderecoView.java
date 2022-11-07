@@ -36,7 +36,8 @@ public class EnderecoView {
 		String referencia = scanner.nextLine();
 		if (referencia != null) {
 			endereco.setReferencia(scanner.nextLine());
-		} System.out.println("Escolha o tipo do seu endereço : ");
+		}
+		System.out.println("Escolha o tipo do seu endereço : ");
 		System.out.println("1 - Residencial");
 		System.out.println("2 - Comercial");
 		endereco.setTipo(scanner.nextInt() == 1 ? TipoEndereco.RESIDENCIAL : TipoEndereco.COMERCIAL);
@@ -72,7 +73,8 @@ public class EnderecoView {
 		String referencia = scanner.nextLine();
 		if (referencia != null) {
 			endereco.setReferencia(scanner.nextLine());
-		} System.out.println("Escolha o tipo do seu endereço : ");
+		}
+		System.out.println("Escolha o tipo do seu endereço : ");
 		System.out.println("1 - Residencial");
 		System.out.println("2 - Comercial");
 		endereco.setTipo(scanner.nextInt() == 1 ? TipoEndereco.RESIDENCIAL : TipoEndereco.COMERCIAL);

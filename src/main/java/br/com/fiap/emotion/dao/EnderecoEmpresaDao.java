@@ -18,6 +18,7 @@ public class EnderecoEmpresaDao implements AbstractDao<EnderecoEmpresa> {
 
 	/**
 	 * Método utilizado para inserir um Endereco no banco
+	 *
 	 * @param endereco a ser inserido
 	 */
 	@Override
@@ -62,6 +63,7 @@ public class EnderecoEmpresaDao implements AbstractDao<EnderecoEmpresa> {
 
 	/**
 	 * Método utilizado para listar todos os registros do banco
+	 *
 	 * @return lista de enderecos
 	 */
 	@Override
@@ -111,6 +113,7 @@ public class EnderecoEmpresaDao implements AbstractDao<EnderecoEmpresa> {
 
 	/**
 	 * Método utilizado para atualizar um registro do banco
+	 *
 	 * @param endereco a ser atualizado
 	 * @throws ObjectNotFoundException lancado quando não encontrado nenhum registro
 	 */
@@ -156,6 +159,7 @@ public class EnderecoEmpresaDao implements AbstractDao<EnderecoEmpresa> {
 
 	/**
 	 * Método utilizado para remover um registro do banco
+	 *
 	 * @param endereco a ser removido
 	 */
 	@Override

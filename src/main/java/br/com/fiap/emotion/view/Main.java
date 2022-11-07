@@ -17,7 +17,7 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		listarOpcoes();
-		while (scanner.hasNext()){
+		while (scanner.hasNext()) {
 			int option = scanner.nextInt();
 			switch (option) {
 				case 1:
@@ -46,7 +46,8 @@ public class Main {
 			}
 			listarOpcoes();
 		}
-}
+	}
+
 	private static void querContinuar() {
 		System.out.println("Deseja continuar? (1 -> Sim / 2 -> Não)");
 		Scanner scanner = new Scanner(System.in);

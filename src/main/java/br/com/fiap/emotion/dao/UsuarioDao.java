@@ -16,6 +16,7 @@ public class UsuarioDao implements AbstractDao<Usuario> {
 
 	/**
 	 * Método utilizado para inserir um Usuario no banco
+	 *
 	 * @param usuario a ser inserido
 	 */
 	@Override
@@ -54,6 +55,7 @@ public class UsuarioDao implements AbstractDao<Usuario> {
 
 	/**
 	 * Método utilizado para pesquisar um Usuario pelo Id do banco
+	 *
 	 * @param id a ser pesquisado
 	 * @return usuario referente ao id pesquisado
 	 * @throws ObjectNotFoundException lancado quando não encontrado nenhum registro
@@ -94,6 +96,7 @@ public class UsuarioDao implements AbstractDao<Usuario> {
 
 	/**
 	 * Método utilizado para listar todos os registros do banco
+	 *
 	 * @return lista de usuarios
 	 */
 	@Override
@@ -132,6 +135,7 @@ public class UsuarioDao implements AbstractDao<Usuario> {
 
 	/**
 	 * Método utilizado para atualizar um registro do banco
+	 *
 	 * @param usuario a ser atualizado
 	 * @throws ObjectNotFoundException lancado quando não encontrado nenhum registro
 	 */
@@ -171,6 +175,7 @@ public class UsuarioDao implements AbstractDao<Usuario> {
 
 	/**
 	 * Método utilizado para remover um registro do banco
+	 *
 	 * @param usuario a ser removido
 	 */
 	@Override
@@ -191,7 +196,7 @@ public class UsuarioDao implements AbstractDao<Usuario> {
 		}
 	}
 
-	public Usuario buscaUsuarioPorLogin(String login, String senha) {
+	public Usuario buscaUsuarioPorLogin(String login) {
 		Usuario usuario = null;
 
 		try {

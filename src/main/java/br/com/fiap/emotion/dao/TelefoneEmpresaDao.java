@@ -18,6 +18,7 @@ public class TelefoneEmpresaDao implements AbstractDao<TelefoneEmpresa> {
 
 	/**
 	 * Método utilizado para inserir um Telefone no banco
+	 *
 	 * @param telefone a ser inserido
 	 */
 	@Override
@@ -55,6 +56,7 @@ public class TelefoneEmpresaDao implements AbstractDao<TelefoneEmpresa> {
 
 	/**
 	 * Método utilizado para listar todos os registros do banco
+	 *
 	 * @return lista de telefones
 	 */
 	@Override
@@ -98,6 +100,7 @@ public class TelefoneEmpresaDao implements AbstractDao<TelefoneEmpresa> {
 
 	/**
 	 * Método utilizado para atualizar um registro do banco
+	 *
 	 * @param telefone a ser atualizado
 	 * @throws ObjectNotFoundException lancado quando não encontrado nenhum registro
 	 */
@@ -135,6 +138,7 @@ public class TelefoneEmpresaDao implements AbstractDao<TelefoneEmpresa> {
 
 	/**
 	 * Método utilizado para remover um registro do banco
+	 *
 	 * @param telefone a ser removido
 	 */
 	@Override

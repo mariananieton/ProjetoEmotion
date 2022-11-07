@@ -149,6 +149,7 @@ public class RecompensasDao implements AbstractDao<Recompensas> {
 
 	/**
 	 * Método utilizado para pesquisar uma recompensa pelo nome
+	 *
 	 * @param nome a ser pesquisado
 	 * @return lista de recompensas referentes ao nome pesquisado
 	 */
