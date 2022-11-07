@@ -26,9 +26,9 @@ public class UsuarioPlanoDao implements AbstractDao<UsuarioPlano> {
 			Connection conexao = ConnectionFactory.getConnection();
 			PreparedStatement stm = conexao.prepareStatement("insert into T_EM_USUARIO_PLANO(id_usuario_plano, " +
 					" id_usuario, id_plano, id_bicicleta, dt_ultima_utilizacao, nr_km_rodados, " +
-					" st_usuario_plano, dt_entrega_bike, dt_retorno_bike, " +
+					" st_usuario_plano, dt_inicio_vigencia , dt_fim_vigencia, dt_entrega_bike, dt_retorno_bike, " +
 					" dt_prevista_retorno, nr_pontos) values " +
-					" (SQ_EM_USU_PLANO.nextval, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+					" (SQ_EM_USU_PLANO.nextval, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
 			stm.setInt(1, usuarioPlano.getUsuario().getId());
 			stm.setInt(2, usuarioPlano.getPlano().getId());
@@ -36,10 +36,12 @@ public class UsuarioPlanoDao implements AbstractDao<UsuarioPlano> {
 			stm.setDate(4, java.sql.Date.valueOf(usuarioPlano.getDataUltimaUtilizacao()));
 			stm.setInt(5, usuarioPlano.getKmRodados());
 			stm.setString(6, String.valueOf(usuarioPlano.getStatus()));
-			stm.setDate(7, java.sql.Date.valueOf(usuarioPlano.getDataEntregaBike()));
-			stm.setDate(8, java.sql.Date.valueOf(usuarioPlano.getDataRetornoBike()));
-			stm.setDate(9, java.sql.Date.valueOf(usuarioPlano.getDataPrevistaRetorno()));
-			stm.setInt(10, usuarioPlano.getPontos());
+			stm.setDate(7, java.sql.Date.valueOf(usuarioPlano.getDataInicioVigencia()));
+			stm.setDate(8, java.sql.Date.valueOf(usuarioPlano.getDataFimVigencia()));
+			stm.setDate(9, java.sql.Date.valueOf(usuarioPlano.getDataEntregaBike()));
+			stm.setDate(10, java.sql.Date.valueOf(usuarioPlano.getDataRetornoBike()));
+			stm.setDate(11, java.sql.Date.valueOf(usuarioPlano.getDataPrevistaRetorno()));
+			stm.setInt(12, usuarioPlano.getPontos());
 
 			stm.executeUpdate();
 
@@ -110,6 +112,8 @@ public class UsuarioPlanoDao implements AbstractDao<UsuarioPlano> {
 				usuarioPlano.setDataUltimaUtilizacao(resultSet.getDate("dt_ultima_utilizacao").toLocalDate());
 				usuarioPlano.setKmRodados(resultSet.getInt("nr_km_rodados"));
 				usuarioPlano.setStatus(resultSet.getString("st_usuario_plano").charAt(0));
+				usuarioPlano.setDataInicioVigencia(resultSet.getDate("dt_inicio_vigencia").toLocalDate());
+				usuarioPlano.setDataFimVigencia(resultSet.getDate("dt_fim_vigencia").toLocalDate());
 				usuarioPlano.setDataEntregaBike(resultSet.getDate("dt_entrega_bike").toLocalDate());
 				usuarioPlano.setDataRetornoBike(resultSet.getDate("dt_retorno_bike").toLocalDate());
 				usuarioPlano.setDataPrevistaRetorno(resultSet.getDate("dt_prevista_retorno").toLocalDate());
@@ -139,7 +143,8 @@ public class UsuarioPlanoDao implements AbstractDao<UsuarioPlano> {
 			Connection conexao = ConnectionFactory.getConnection();
 			PreparedStatement stm = conexao.prepareStatement("update T_EM_USUARIO_PLANO set  " +
 					" id_usuario = ?, id_plano = ?, id_bicicleta = ?, dt_ultima_utilizacao = ?, " +
-					" nr_km_roddados = ?, st_usuario_plano = ?, dt_entrega_bike = ?," +
+					" nr_km_roddados = ?, st_usuario_plano = ?, dt_inicio_vigencia = ?, " +
+					" dt_fim_vigencia = ?, dt_entrega_bike = ?," +
 					" dt_retorno_bike = ?, dt_prevista_retorno = ?, nr_pontos = ? where " +
 					" id_utilizacao = ?");
 
@@ -149,11 +154,13 @@ public class UsuarioPlanoDao implements AbstractDao<UsuarioPlano> {
 			stm.setDate(4, java.sql.Date.valueOf(usuarioPlano.getDataUltimaUtilizacao()));
 			stm.setInt(5, usuarioPlano.getKmRodados());
 			stm.setString(6, String.valueOf(usuarioPlano.getStatus()));
-			stm.setDate(7, java.sql.Date.valueOf(usuarioPlano.getDataEntregaBike()));
-			stm.setDate(8, java.sql.Date.valueOf(usuarioPlano.getDataRetornoBike()));
-			stm.setDate(9, java.sql.Date.valueOf(usuarioPlano.getDataPrevistaRetorno()));
-			stm.setInt(10, usuarioPlano.getPontos());
-			stm.setInt(11, usuarioPlano.getId());
+			stm.setDate(7, java.sql.Date.valueOf(usuarioPlano.getDataInicioVigencia()));
+			stm.setDate(8, java.sql.Date.valueOf(usuarioPlano.getDataFimVigencia()));
+			stm.setDate(9, java.sql.Date.valueOf(usuarioPlano.getDataEntregaBike()));
+			stm.setDate(10, java.sql.Date.valueOf(usuarioPlano.getDataRetornoBike()));
+			stm.setDate(11, java.sql.Date.valueOf(usuarioPlano.getDataPrevistaRetorno()));
+			stm.setInt(12, usuarioPlano.getPontos());
+			stm.setInt(13, usuarioPlano.getId());
 
 			stm.executeUpdate();
 

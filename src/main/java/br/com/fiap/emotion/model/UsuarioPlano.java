@@ -19,6 +19,10 @@ public class UsuarioPlano {
 
 	private char status;
 
+	private LocalDate dataInicioVigencia;
+
+	private LocalDate dataFimVigencia;
+
 	private LocalDate dataEntregaBike;
 
 	private LocalDate dataPrevistaRetorno;
@@ -115,6 +119,22 @@ public class UsuarioPlano {
 		this.pontos = pontos;
 	}
 
+	public LocalDate getDataInicioVigencia() {
+		return dataInicioVigencia;
+	}
+
+	public void setDataInicioVigencia(LocalDate dataInicioVigencia) {
+		this.dataInicioVigencia = dataInicioVigencia;
+	}
+
+	public LocalDate getDataFimVigencia() {
+		return dataFimVigencia;
+	}
+
+	public void setDataFimVigencia(LocalDate dataFimVigencia) {
+		this.dataFimVigencia = dataFimVigencia;
+	}
+
 	@Override
 	public String toString() {
 		return new StringJoiner(", ", UsuarioPlano.class.getSimpleName() + "[", "]")
@@ -125,6 +145,8 @@ public class UsuarioPlano {
 				.add("dataUltimaUtilizacao=" + dataUltimaUtilizacao)
 				.add("kmRodados=" + kmRodados)
 				.add("status=" + status)
+				.add("dataInicioVigencia=" + dataInicioVigencia)
+				.add("dataFimVigencia=" + dataFimVigencia)
 				.add("dataEntregaBike=" + dataEntregaBike)
 				.add("dataPrevistaRetorno=" + dataPrevistaRetorno)
 				.add("dataRetornoBike=" + dataRetornoBike)
