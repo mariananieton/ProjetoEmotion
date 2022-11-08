@@ -3,6 +3,7 @@ package br.com.fiap.emotion.dao;
 import br.com.fiap.emotion.exception.ObjectNotFoundException;
 import br.com.fiap.emotion.factory.ConnectionFactory;
 import br.com.fiap.emotion.model.Empresa;
+import br.com.fiap.emotion.model.Usuario;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -174,5 +175,32 @@ public class EmpresaDao implements AbstractDao<Empresa> {
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
+	}
+
+	public Empresa buscaEmpresaPorCnpj(int cnpj) {
+		Empresa empresa = null;
+
+		try {
+			Connection conexao = ConnectionFactory.getConnection();
+
+			PreparedStatement stm = conexao.prepareStatement("select * from T_EM_EMPRESA where nr_cnpj = ?");
+			stm.setInt(1, cnpj);
+
+			ResultSet resultSet = stm.executeQuery();
+
+			if (resultSet.next()) {
+				empresa = new Empresa();
+
+				empresa.setId(resultSet.getInt("id_empresa"));
+				empresa.setCnpj(resultSet.getInt("nr_cnpj"));
+				empresa.setRazaoSocial(resultSet.getString("nm_razao_social"));
+			}
+			conexao.close();
+		} catch (ClassNotFoundException e) {
+			throw new RuntimeException(e);
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return empresa;
 	}
 }
