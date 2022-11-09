@@ -30,7 +30,7 @@ public class UsuarioDao implements AbstractDao<Usuario> {
 
 			stm.setString(1, usuario.getNome());
 			stm.setDate(2, java.sql.Date.valueOf(usuario.getDataNascimento()));
-			stm.setInt(3, usuario.getCpf());
+			stm.setLong(3, usuario.getCpf());
 			stm.setString(4, usuario.getLogin());
 			stm.setString(5, usuario.getSenha());
 			stm.setInt(6, usuario.getTotalPontos());
@@ -75,7 +75,7 @@ public class UsuarioDao implements AbstractDao<Usuario> {
 				usuario.setId(resultSet.getInt("id_usuario"));
 				usuario.setNome(resultSet.getString("nm_usuario"));
 				usuario.setDataNascimento(resultSet.getDate("dt_nascimento").toLocalDate());
-				usuario.setCpf(resultSet.getInt("nr_cpf"));
+				usuario.setCpf(resultSet.getLong("nr_cpf"));
 				usuario.setLogin(resultSet.getString("nm_login"));
 				usuario.setSenha(resultSet.getString("nm_senha"));
 				usuario.setTotalPontos(resultSet.getInt("nr_total_pontos"));
@@ -115,7 +115,7 @@ public class UsuarioDao implements AbstractDao<Usuario> {
 				usuario.setId(resultSet.getInt("id_usuario"));
 				usuario.setNome(resultSet.getString("nm_usuario"));
 				usuario.setDataNascimento(resultSet.getDate("dt_nascimento").toLocalDate());
-				usuario.setCpf(resultSet.getInt("nr_cpf"));
+				usuario.setCpf(resultSet.getLong("nr_cpf"));
 				usuario.setLogin(resultSet.getString("nm_login"));
 				usuario.setSenha(resultSet.getString("nm_senha"));
 				usuario.setTotalPontos(resultSet.getInt("nr_total_pontos"));
@@ -151,7 +151,7 @@ public class UsuarioDao implements AbstractDao<Usuario> {
 
 			stm.setString(1, usuario.getNome());
 			stm.setDate(2, java.sql.Date.valueOf(usuario.getDataNascimento()));
-			stm.setInt(3, usuario.getCpf());
+			stm.setLong(3, usuario.getCpf());
 			stm.setString(4, usuario.getLogin());
 			stm.setString(5, usuario.getSenha());
 			stm.setInt(6, usuario.getTotalPontos());
@@ -212,7 +212,7 @@ public class UsuarioDao implements AbstractDao<Usuario> {
 				usuario.setId(resultSet.getInt("id_usuario"));
 				usuario.setNome(resultSet.getString("nm_usuario"));
 				usuario.setDataNascimento(resultSet.getDate("dt_nascimento").toLocalDate());
-				usuario.setCpf(resultSet.getInt("nr_cpf"));
+				usuario.setCpf(resultSet.getLong("nr_cpf"));
 				usuario.setLogin(resultSet.getString("nm_login"));
 				usuario.setSenha(resultSet.getString("nm_senha"));
 				usuario.setTotalPontos(resultSet.getInt("nr_total_pontos"));

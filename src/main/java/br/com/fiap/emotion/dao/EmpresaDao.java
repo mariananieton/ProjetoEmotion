@@ -29,7 +29,7 @@ public class EmpresaDao implements AbstractDao<Empresa> {
 					" nr_cnpj, nm_razao_social) values " +
 					" (SQ_EM_EMPRESA.nextval, ?, ?)");
 
-			stm.setInt(1, empresa.getCnpj());
+			stm.setLong(1, empresa.getCnpj());
 			stm.setString(2, empresa.getRazaoSocial());
 
 			stm.executeUpdate();
@@ -70,7 +70,7 @@ public class EmpresaDao implements AbstractDao<Empresa> {
 				empresa = new Empresa();
 
 				empresa.setId(resultSet.getInt("id_empresa"));
-				empresa.setCnpj(resultSet.getInt("nr_cnpj"));
+				empresa.setCnpj(resultSet.getLong("nr_cnpj"));
 				empresa.setRazaoSocial(resultSet.getString("nm_razao_social"));
 			}
 
@@ -105,7 +105,7 @@ public class EmpresaDao implements AbstractDao<Empresa> {
 			while (resultSet.next()) {
 				Empresa empresa = new Empresa();
 				empresa.setId(resultSet.getInt("id_empresa"));
-				empresa.setCnpj(resultSet.getInt("nr_cnpj"));
+				empresa.setCnpj(resultSet.getLong("nr_cnpj"));
 				empresa.setRazaoSocial(resultSet.getString("nm_razao_social"));
 
 				lista.add(empresa);
@@ -135,7 +135,7 @@ public class EmpresaDao implements AbstractDao<Empresa> {
 					" nr_cnpj = ?, nm_razao_social = ? where " +
 					" id_empresa = ?");
 
-			stm.setInt(1, empresa.getCnpj());
+			stm.setLong(1, empresa.getCnpj());
 			stm.setString(2, empresa.getRazaoSocial());
 			stm.setInt(3, empresa.getId());
 
@@ -177,14 +177,14 @@ public class EmpresaDao implements AbstractDao<Empresa> {
 		}
 	}
 
-	public Empresa buscaEmpresaPorCnpj(int cnpj) {
+	public Empresa buscaEmpresaPorCnpj(long cnpj) {
 		Empresa empresa = null;
 
 		try {
 			Connection conexao = ConnectionFactory.getConnection();
 
 			PreparedStatement stm = conexao.prepareStatement("select * from T_EM_EMPRESA where nr_cnpj = ?");
-			stm.setInt(1, cnpj);
+			stm.setLong(1, cnpj);
 
 			ResultSet resultSet = stm.executeQuery();
 
@@ -192,7 +192,7 @@ public class EmpresaDao implements AbstractDao<Empresa> {
 				empresa = new Empresa();
 
 				empresa.setId(resultSet.getInt("id_empresa"));
-				empresa.setCnpj(resultSet.getInt("nr_cnpj"));
+				empresa.setCnpj(resultSet.getLong("nr_cnpj"));
 				empresa.setRazaoSocial(resultSet.getString("nm_razao_social"));
 			}
 			conexao.close();

@@ -17,7 +17,7 @@ public class Usuario {
 
 	private EmailUsuario email;
 
-	private int cpf;
+	private long cpf;
 
 	private String login;
 
@@ -75,11 +75,11 @@ public class Usuario {
 		this.email = email;
 	}
 
-	public int getCpf() {
+	public long getCpf() {
 		return cpf;
 	}
 
-	public void setCpf(int cpf) {
+	public void setCpf(long cpf) {
 		this.cpf = cpf;
 	}
 

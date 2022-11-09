@@ -14,7 +14,7 @@ public class Empresa {
 
 	private EmailEmpresa email;
 
-	private int cnpj;
+	private long cnpj;
 
 	public int getId() {
 		return id;
@@ -56,11 +56,11 @@ public class Empresa {
 		this.email = email;
 	}
 
-	public int getCnpj() {
+	public long getCnpj() {
 		return cnpj;
 	}
 
-	public void setCnpj(int cnpj) {
+	public void setCnpj(long cnpj) {
 		this.cnpj = cnpj;
 	}
 
